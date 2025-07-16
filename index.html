@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roommate Finder</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#" class="nav-link active" onclick="showPage('profile')">Profile</a>
+                <a href="#" class="nav-link" onclick="showPage('houses')">Houses</a>
+                <a href="#" class="nav-link" onclick="showPage('roommates')">Roommates</a>
+                <a href="#" class="nav-link" onclick="showPage('groups')">My Groups</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <!-- Profile Page -->
+        <div id="profile" class="page-section active">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-avatar">AC</div>
+                    <div class="profile-details">
+                        <h1>Alex Chen</h1>
+                        <p>21 years old</p>
+                        <p>alex.chen@carleton.ca</p>
+                        <p>Carleton University - Computer Science</p>
+                        <p>3rd Year • Budget: $800-900</p>
+                        <div class="interests">
+                            <span class="interest-tag">Gaming</span>
+                            <span class="interest-tag">Studying</span>
+                            <span class="interest-tag">Cooking</span>
+                            <span class="interest-tag">Reading</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>About Me</h3>
+                <p>Looking for a quiet roommate to share an apartment near campus. I'm clean, organized, and focused on my studies.</p>
+            </div>
+            <div class="card">
+                <h3>Quick Actions</h3>
+                <div style="display: flex; gap: 15px; margin-top: 15px;">
+                    <a href="#" class="btn btn-primary">Edit Profile</a>
+                    <a href="#" class="btn btn-secondary">Account Settings</a>
+                    <a href="#" class="btn btn-secondary">View Public Profile</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>My Groups</h3>
+                <p>You haven't joined any groups yet.</p>
+                <div style="margin-top: 15px;">
+                    <a href="#" class="btn btn-primary">Create Group</a>
+                    <a href="#" class="btn btn-secondary">Join Group</a>
+                </div>
+            </div>
+        </div>
+        <!-- Houses Page -->
+        <div id="houses" class="page-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search by location or amenities...">
+                <div class="filters">
+                    <button class="filter-btn">Near Campus</button>
+                    <button class="filter-btn">Parking</button>
+                    <button class="filter-btn">Laundry</button>
+                    <button class="filter-btn">WiFi</button>
+                    <button class="filter-btn">Under $800</button>
+                </div>
+            </div>
+            <div class="houses-grid">
+                <div class="house-card">
+                    <h3>123 College Street, Ottawa</h3>
+                    <div class="house-price">$800/month</div>
+                    <div class="house-details">
+                        <span class="house-detail">3 bed</span>
+                        <span class="house-detail">2 bath</span>
+                        <span class="house-detail">Max 4</span>
+                    </div>
+                    <div class="amenities">
+                        <span class="amenity">Laundry</span>
+                        <span class="amenity">WiFi</span>
+                        <span class="amenity">Parking</span>
+                        <span class="amenity">Near Campus</span>
+                    </div>
+                    <p><strong>Landlord:</strong> Sarah Johnson</p>
+                    <p>(416) 555-0123 • sarah.j@email.com</p>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Contact</a>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="house-card">
+                    <h3>789 Queen Street West, Toronto</h3>
+                    <div class="house-price">$750/month</div>
+                    <div class="house-details">
+                        <span class="house-detail">2 bed</span>
+                        <span class="house-detail">1 bath</span>
+                        <span class="house-detail">Max 3</span>
+                    </div>
+                    <div class="amenities">
+                        <span class="amenity">Balcony</span>
+                        <span class="amenity">WiFi</span>
+                        <span class="amenity">Near TTC</span>
+                    </div>
+                    <p><strong>Landlord:</strong> Emma Wilson</p>
+                    <p>(416) 555-0789 • emma.w@gmail.com</p>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Contact</a>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+                <div class="house-card">
+                    <h3>465 catherine street, ottawaa</h3>
+                    <div class="house-price">$950/month</div>
+                    <div class="house-details">
+                        <span class="house-detail">4 bed</span>
+                        <span class="house-detail">2 bath</span>
+                        <span class="house-detail">Max 5</span>
+                    </div>
+                    <div class="amenities">
+                        <span class="amenity">Gym</span>
+                        <span class="amenity">Pool</span>
+                        <span class="amenity">WiFi</span>
+                        <span class="amenity">Study Room</span>
+                    </div>
+                    <p><strong>Landlord:</strong> Mike Chen</p>
+                    <p>(416) 555-0456 • mike.chen@gmail.com</p>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Contact</a>
+                        <a href="#" class="btn btn-secondary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Roommates Page -->
+        <div id="roommates" class="page-section">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search by name or interests...">
+                <div class="filters">
+                    <button class="filter-btn">Filter by school</button>
+                    <button class="filter-btn">Filter by program</button>
+                    <button class="filter-btn">More Filters</button>
+                </div>
+            </div>
+            <div class="roommates-grid">
+                <div class="roommate-card">
+                    <div class="roommate-header">
+                        <div class="roommate-avatar">AC</div>
+                        <div class="roommate-info">
+                            <h4>Alex Chen</h4>
+                            <p>21 years old</p>
+                            <p>Carleton University - Computer Science, 3rd Year</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="interest-tag">Gaming</span>
+                        <span class="interest-tag">Studying</span>
+                        <span class="interest-tag">Cooking</span>
+                    </div>
+                    <p style="margin: 15px 0;">Looking for a quiet roommate to share an apartment near campus. I'm clean, organized, and focused on my studies.</p>
+                    <div class="budget">$800-900</div>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Message</a>
+                        <a href="#" class="btn btn-secondary">View Profile</a>
+                    </div>
+                </div>
+                <div class="roommate-card">
+                    <div class="roommate-header">
+                        <div class="roommate-avatar">SK</div>
+                        <div class="roommate-info">
+                            <h4>Sarah Kim</h4>
+                            <p>20 years old</p>
+                            <p>Carleton University - Business, 2nd Year</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="interest-tag">Yoga</span>
+                        <span class="interest-tag">Reading</span>
+                        <span class="interest-tag">Coffee</span>
+                    </div>
+                    <p style="margin: 15px 0;">Friendly and social person looking for roommates to explore the city with. I love trying new restaurants!</p>
+                    <div class="budget">$750-850</div>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Message</a>
+                        <a href="#" class="btn btn-secondary">View Profile</a>
+                    </div>
+                </div>
+                <div class="roommate-card">
+                    <div class="roommate-header">
+                        <div class="roommate-avatar">MJ</div>
+                        <div class="roommate-info">
+                            <h4>Marcus Johnson</h4>
+                            <p>22 years old</p>
+                            <p>University of Ottawa - Engineering, 4th Year</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="interest-tag">Sports</span>
+                        <span class="interest-tag">Music</span>
+                        <span class="interest-tag">Technology</span>
+                    </div>
+                    <p style="margin: 15px 0;">Final year engineering student. I'm responsible, clean, and looking for like-minded roommates.</p>
+                    <div class="budget">$700-800</div>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Message</a>
+                        <a href="#" class="btn btn-secondary">View Profile</a>
+                    </div>
+                </div>
+                <div class="roommate-card">
+                    <div class="roommate-header">
+                        <div class="roommate-avatar">ER</div>
+                        <div class="roommate-info">
+                            <h4>Emma Rodriguez</h4>
+                            <p>19 years old</p>
+                            <p>University of Ottawa - Arts, 1st Year</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="interest-tag">Art</span>
+                        <span class="interest-tag">Theater</span>
+                        <span class="interest-tag">Photography</span>
+                    </div>
+                    <p style="margin: 15px 0;">Creative arts student looking for roommates who appreciate creativity and good conversations.</p>
+                    <div class="budget">$600-750</div>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Message</a>
+                        <a href="#" class="btn btn-secondary">View Profile</a>
+                    </div>
+                </div>
+                <div class="roommate-card">
+                    <div class="roommate-header">
+                        <div class="roommate-avatar">DP</div>
+                        <div class="roommate-info">
+                            <h4>David Park</h4>
+                            <p>23 years old</p>
+                            <p>Algonquin College - Medicine, 1st Year</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="interest-tag">Fitness</span>
+                        <span class="interest-tag">Meditation</span>
+                        <span class="interest-tag">Volunteering</span>
+                    </div>
+                    <p style="margin: 15px 0;">Med student with a busy schedule but always respectful of shared spaces. Looking for mature roommates.</p>
+                    <div class="budget">$900-1000</div>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Message</a>
+                        <a href="#" class="btn btn-secondary">View Profile</a>
+                    </div>
+                </div>
+                <div class="roommate-card">
+                    <div class="roommate-header">
+                        <div class="roommate-avatar">JL</div>
+                        <div class="roommate-info">
+                            <h4>Jessica Liu</h4>
+                            <p>21 years old</p>
+                            <p>Algonquin College - Law, 2nd Year</p>
+                        </div>
+                    </div>
+                    <div class="interests">
+                        <span class="interest-tag">Debate</span>
+                        <span class="interest-tag">Travel</span>
+                        <span class="interest-tag">Cooking</span>
+                    </div>
+                    <p style="margin: 15px 0;">Law student who loves good food and meaningful conversations. Looking for responsible roommates.</p>
+                    <div class="budget">$850-950</div>
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn btn-primary">Message</a>
+                        <a href="#" class="btn btn-secondary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Groups Page -->
+        <div id="groups" class="page-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                <h2 style="color: #8B4513; font-size: 2em;">My Tenant Groups</h2>
+                <div>
+                    <a href="#" class="btn btn-primary">Create Group</a>
+                    <a href="#" class="btn btn-secondary">Join Group</a>
+                </div>
+            </div>
+            <div class="group-card">
+                <div class="group-header">
+                    <h3 class="group-title">Downtown Loft Squad</h3>
+                    <span class="group-role">admin</span>
+                </div>
+                <p style="color: #A0522D; margin-bottom: 15px;">123 Main St, Apt 4B</p>
+                <p>3BR loft in downtown area</p>
+                <div class="group-details">
+                    <div>
+                        <p><strong>3 members</strong></p>
+                        <p>You, Sarah Johnson, Mike Chen</p>
+                    </div>
+                    <div>
+                        <p><strong>$2400/month total</strong></p>
+                        <p>Next payment: 2025-07-31</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="btn btn-primary">Manage Group</a>
+                    <a href="#" class="btn btn-secondary">Split Payment</a>
+                </div>
+            </div>
+            <div class="group-card">
+                <div class="group-header">
+                    <h3 class="group-title">Campus Roommates</h3>
+                    <span class="group-role" style="background: #A0522D;">member</span>
+                </div>
+                <p style="color: #A0522D; margin-bottom: 15px;">456 College Ave, Unit 12</p>
+                <p>Student housing near university</p>
+                <div class="group-details">
+                    <div>
+                        <p><strong>4 members</strong></p>
+                        <p>You, Alex Rivera, Emma Davis, Jordan Smith</p>
+                    </div>
+                    <div>
+                        <p><strong>$1800/month total</strong></p>
+                        <p>Next payment: 2025-07-31</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;">
+                    <a href="#" class="btn btn-primary">View Group</a>
+                    <a href="#" class="btn btn-secondary">Split Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-section');
+            pages.forEach(page => page.classList.remove('active'));
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            // Update navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html> 
